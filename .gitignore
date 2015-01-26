@@ -26,3 +26,8 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+# Compiled sources and binaries
+build/*
+cache/*
+compile/*
