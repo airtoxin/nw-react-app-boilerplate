@@ -1,4 +1,4 @@
 var gulp = require( 'gulp' );
-var NwBuilder = require( 'node-webkit-builder' );
+var NwBuilder = require( 'nw-builder' );
 
 gulp.task( 'compile', [ 'browserify', 'concat', 'less', 'through' ] );
