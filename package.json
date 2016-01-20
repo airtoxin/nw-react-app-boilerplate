@@ -4,7 +4,9 @@
   "description": "An application boilerplate of nw.js(node-webkit) and React.js",
   "main": "index.html",
   "scripts": {
-    "run": "gulp"
+    "prestart": "gulp compile",
+    "start": "nwbuild -r -v 0.12.3 --cacheDir ./cache ./compile",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -17,18 +19,19 @@
   },
   "homepage": "https://github.com/airtoxin/nw-react-app-boilerplate",
   "dependencies": {
-    "lodash": "^3.0.0",
-    "react": "^0.12.2",
-    "react-tap-event-plugin": "^0.1.3"
+    "lodash": "^4.0.0",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-tap-event-plugin": "^0.2.1"
   },
   "devDependencies": {
-    "browserify": "^8.1.1",
+    "browserify": "^13.0.0",
     "gulp": "^3.8.10",
-    "gulp-less": "^2.0.1",
     "gulp-concat": "^2.4.3",
-    "node-webkit-builder": "^1.0.7",
+    "gulp-less": "^3.0.5",
+    "nw-builder": "^2.2.0",
     "reactify": "^1.0.0",
-    "require-dir": "^0.1.0",
+    "require-dir": "^0.3.0",
     "vinyl-source-stream": "^1.0.0"
   }
 }
