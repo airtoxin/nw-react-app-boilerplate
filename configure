@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ ! -d ".git" ]; then
+	echo "Error: This is not a git repo root folder" >&2
+	exit 1
+fi
+
+# Reinitialize the repo for a clean slate
+rm -rf .git
+git init .
+
+
+# Remove unwanted files
+rm LICENSE README.md
+rm configure
